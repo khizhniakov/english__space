@@ -14,7 +14,7 @@
    box-sizing: border-box;
    outline: none; border:none;
    text-decoration: none;
-   transition: .2s linear;
+   transition: .3s linear;
 }
 
 *::selection{
@@ -50,7 +50,7 @@ body{
 section{
    max-width: 1200px;
    margin:0 auto;
-   padding:2rem;
+   padding:1rem;
 }
 
 .btn{
@@ -121,7 +121,6 @@ section{
 .header .flex .navbar a:hover{
    color:var(--orange);
 }
-
 #menu-btn{
    cursor: pointer;
    color:var(--white);
