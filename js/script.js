@@ -33,7 +33,6 @@ var swiper = new Swiper(".reviews-slider", {
 
 //animation
 const animItems = document.querySelectorAll("._anim-items");
-
 if (animItems.length > 0) {
   window.addEventListener("scroll", animOnScroll);
   function animOnScroll(params) {
@@ -69,4 +68,27 @@ if (animItems.length > 0) {
   setTimeout(() => {
     animOnScroll();
   }, 300);
+}
+
+// spoiler
+
+$(document).ready(function () {
+  $(".item__title").click(function (event) {
+    if ($(".item").hasClass("one")) {
+      $("item__title").not($(this)).removeClass("active");
+      $("item__text").not($(this).next()).slideUp(300);
+    }
+    $(this).toggleClass("active").next().slideToggle(300);
+  });
+});
+
+// accaridon
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].onclick = function () {
+    this.classList.toggle("active");
+    this.nextElementSibling.classList.toggle("show");
+  };
 }

@@ -65,15 +65,14 @@ section {
    border-radius: 5rem;
    background-color: var(--light-bg);
    cursor: pointer;
-   color: var(--white);
+   color: var(--light-white);
    font-size: 1.8rem;
    font-weight: 700;
    padding: 2rem 3rem;
 }
 
-
 .btn:hover {
-   background-color: var(--white);
+   background-color: var(--light-white);
    color: var(--black);
 }
 
@@ -111,7 +110,7 @@ section {
 .fullscreen_btn {
    transform: translate(0px, 120%);
    opacity: 0;
-   transition: transform translate 0.8s ease 0.5s;
+   transition: transform translate 0.8s ease 0.8s;
 }
 
 .fullscreen_btn._active {
@@ -190,7 +189,6 @@ section {
    flex: 1 1 40rem;
    text-align: center;
 }
-
 
 .home .row .image {
    flex: 1 1 40rem;
@@ -286,7 +284,101 @@ section {
    color: var(--light-white);
 }
 
+/* answers */
+.answers .row {
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 1.5rem;
+}
 
+.answers .row .content {
+   text-align: center;
+   flex: 1 1 40rem;
+}
+
+.answers .content h3 {
+   font-family: 'DynaPuff', cursive;
+   margin-bottom: 2.5rem;
+   text-align: center;
+   font-size: 4rem;
+   color: var(--white);
+   text-transform: uppercase;
+}
+
+.answers .content h3 span {
+   font-family: 'DynaPuff', cursive;
+   color: var(--orange);
+}
+
+.accordion {
+   background-color: var(--light-bg);
+   color: var(--light-white);
+   cursor: pointer;
+   padding-top: 15px;
+   padding-left: 15px;
+   width: 100%;
+   text-align: left;
+   border: none;
+   border-radius: .5rem;
+   font-size: 1.8rem;
+   outline: none;
+   transition: 0.4s;
+}
+
+
+.active,
+.accordion:hover {
+   background-color: var(--light-white);
+   color: var(--black);
+}
+
+.active::after:hover {
+   color: var(--black);
+}
+
+.accordion:after {
+   content: '+';
+   font-size: 4rem;
+   color: var(--orange);
+   float: right;
+   margin-left: 5px;
+   margin-right: 15px;
+   margin-bottom: 20px;
+}
+
+.accordion p {
+   display: inline-block;
+   margin: 13px 0px;
+
+}
+
+.active:after {
+   content: "-";
+   color: var(--orange);
+}
+
+.panel {
+   font-size: 1.8rem;
+   font-style: italic;
+   border-radius: .5rem;
+   background-color: var(--light-white);
+   color: var(--black);
+   max-height: 0;
+   overflow: hidden;
+   transition: max-height 0.2s ease-out;
+   border-top: 1px var(--black) solid;
+}
+
+.panel p {
+   padding-left: 10px;
+   padding-top: 15px;
+   padding-bottom: 15px;
+}
+
+/* end answers */
+
+/* teacher */
 .teacher {
    margin-top: 1rem;
    margin-bottom: 2rem;
@@ -336,7 +428,9 @@ section {
    padding: 1.4rem;
 }
 
+/* end teacher */
 
+/* slider */
 .reviews-slider .slide {
    border-radius: .5rem;
    background-color: var(--light-bg);
@@ -376,7 +470,8 @@ section {
    color: var(--orange);
 }
 
-
+/* end slider */
+/* contact */
 .contact .row {
    display: flex;
    align-items: center;
@@ -413,7 +508,8 @@ section {
    color: var(--light-white);
 }
 
-
+/* end contact */
+/* footer */
 .footer {
    background-color: var(--light-bg);
    text-align: center;
@@ -449,6 +545,8 @@ section {
    color: var(--orange);
 }
 
+/* end footer */
+
 /* media queries  */
 
 @media (max-width:991px) {
@@ -473,6 +571,7 @@ section {
    #menu-btn.fa-times {
       transform: rotate(180deg);
    }
+
 
    .header .flex .navbar {
       position: absolute;
@@ -500,10 +599,26 @@ section {
       font-size: 6rem;
    }
 
+
+   .about__text {
+      text-align: start;
+   }
+
    .teacher__box {
       text-align: center;
-      align-items: center;
       flex-direction: column;
+   }
+
+   .teacher {
+      width: 95%;
+   }
+
+   .teacher__about {
+      width: 100%;
+   }
+
+   .about__teacher {
+      margin-left: 0;
    }
 
    .teacher__positioun {
@@ -515,7 +630,7 @@ section {
    }
 
    .home .row .image img {
-      margin-top: 3rem;
+      margin-top: -2rem;
    }
 }
 
@@ -533,4 +648,13 @@ section {
       font-size: 3rem;
    }
 
+   .home .row .image img,
+   .about .row .image img,
+   .contact .row .image img {
+      display: block;
+      margin: 0 auto;
+      width: 90%;
+   }
 }
+
+/* end media */
