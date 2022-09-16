@@ -327,13 +327,13 @@ section {
 }
 
 
-.active,
+.activ,
 .accordion:hover {
    background-color: var(--light-white);
    color: var(--black);
 }
 
-.active::after:hover {
+.activ::after:hover {
    color: var(--black);
 }
 
@@ -353,7 +353,7 @@ section {
 
 }
 
-.active:after {
+.activ:after {
    content: "-";
    color: var(--orange);
 }
