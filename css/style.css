@@ -207,10 +207,12 @@ section {
    padding: 5px;
    color: var(--light-white);
    list-style: none;
+   font-style: italic;
 }
 
 .why-choose__items span {
    text-align: center;
+   font-style: normal;
    color: var(--white);
    font-size: 2.5rem;
 }
@@ -284,6 +286,7 @@ section {
 
 .teacher__positioun {
    font-size: 3rem;
+   font-style: italic;
    color: var(--light-white);
    margin-bottom: 10px;
 }
@@ -308,8 +311,12 @@ section {
 /* end teacher */
 
 /* slider */
+.swiper-pagination-bullet-active {
+   background-color: var(--secondary);
+}
+
 .reviews-slider .slide {
-   border-radius: .5rem;
+   border-radius: 3.5rem;
    background-color: var(--light-bg);
    padding: 2rem;
    margin-bottom: 4rem;
@@ -319,6 +326,7 @@ section {
 .reviews-slider .slide p {
    line-height: 2;
    font-size: 1.6rem;
+   font-style: italic;
    color: var(--light-white);
 }
 
@@ -467,7 +475,7 @@ section {
    width: 100%;
    margin-top: 1rem;
    margin-bottom: 2rem;
-   border-radius: .5rem;
+   border-radius: 3.5rem;
    background-color: var(--light-bg);
    font-size: 1.8rem;
    color: var(--white);
