@@ -6,9 +6,10 @@
 :root {
    --secondary: #ff9100;
    --white: #fff;
-   --light-white: #aaa;
-   --black: #3d3d3d;
-   --light-bg: #4b4b4b;
+   --light-white: rgb(170, 170, 170);
+   --black: #28282B;
+   --light-bg: #4b4b4b67;
+   --light-bg-ft: #4b4b4bad;
 }
 
 * {
@@ -85,7 +86,8 @@ section {
    left: 0;
    right: 0;
    z-index: 1000;
-   background-color: var(--light-bg);
+   background-color: var(--light-bg-ft);
+   backdrop-filter: blur(10px);
 }
 
 .header .flex {
@@ -179,6 +181,7 @@ section {
 
 .count .box-container .box .content p {
    font-size: 1.6rem;
+   font-style: italic;
    color: var(--light-white);
 }
 
@@ -306,6 +309,38 @@ section {
    border-radius: 3.5rem;
    background-color: var(--light-bg);
    padding: 1.4rem;
+}
+
+.teacher__btn {
+   display: flex;
+   justify-items: center;
+   align-items: center;
+   gap: 1.5rem;
+}
+
+.teacher__btn a {
+   margin-top: 0;
+}
+
+.share a {
+   margin: 1.3rem;
+   height: 5.5rem;
+   width: 5.5rem;
+   padding-left: 14px;
+   line-height: 5.5rem;
+   border-radius: 50%;
+   font-size: 3rem;
+   color: var(--white);
+   background-color: var(--light-bg-ft);
+   ;
+}
+
+.share a:not(:last-child) {
+   padding-left: 17px;
+}
+
+.share a:hover {
+   background-color: var(--secondary);
 }
 
 /* end teacher */
@@ -492,32 +527,16 @@ section {
 
 /* footer */
 .footer {
-   background-color: var(--light-bg);
+   background-color: var(--light-bg-ft);
    text-align: center;
    /* padding-bottom: 7rem; */
-}
-
-.footer .share a {
-   margin: 0 .3rem;
-   height: 4.5rem;
-   width: 4.5rem;
-   line-height: 4.5rem;
-   border-radius: 50%;
-   font-size: 2rem;
-   color: var(--white);
-   background-color: var(--black);
-   ;
-}
-
-.footer .share a:hover {
-   background-color: var(--secondary);
 }
 
 .footer .credit {
    margin-top: 2.5rem;
    padding: 1.5rem;
    padding-top: 2.5rem;
-   border-top: .1rem solid var(--light-white);
+   border-top: .1rem solid var(--secondary);
    font-size: 2rem;
    color: var(--light-white);
 }
@@ -542,7 +561,7 @@ section {
 }
 
 .btn:hover {
-   background-color: var(--light-white);
+   background-color: var(--secondary);
    color: var(--black);
 }
 
@@ -705,6 +724,10 @@ section {
 
    .home .row .content h3 {
       font-size: 5rem;
+   }
+
+   h3 .heading {
+      padding: 30px 0;
    }
 
    .heading {
